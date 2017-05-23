@@ -5,23 +5,38 @@
     <META name="viewport" content="width=device-width, initial-scale=1">
     <title>Starting Clojure</title>
     {% style "/css/screen.css" %}
+    <link rel="stylesheet" href="https://cdn.concisecss.com/concise.min.css">
   </head>
   <body>
-    <header>
-        <ul>
-            <li>IntelliJ</li>
-            <li>Sublime Text</li>
-            <li>Atom</li>
-            <li>Eclipse</li>
-            <li>VS Code</li>
-            <li>Vim</li>
-            <li>Emacs</li>
-        </ul>
-    </header>
+  <button class="close-offcanvas">Menu<span class="icon"></span></button>
+  <div class="sidebar-offcanvas">
+      <nav class="index-nav">
+          <h3 class="title">Starting Clojure</h3>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/guides/intellij">IntelliJ</a></li>
+              <!--<li><a href="/guides/sublime">Sublime Text</a></li>-->
+              <!--<li><a href="/guides/atom">Atom</a></li>-->
+              <!--<li><a href="/guides/eclipse">Eclipse</a></li>-->
+              <!--<li><a href="/guides/vscode">VS Code</a></li>-->
+              <!--<li><a href="/guides/vim">Vim</a></li>-->
+              <!--<li><a href="/guides/emacs">Emacs</a></li>-->
+              <li><a href="/about">About</a></li>
+          </ul>
+      </nav>
+  </div>
 
-    <div>
-      {% block content %}
-      {% endblock %}
-    </div>
+<div class="content-offcanvas">
+    <article container="small">
+        {% block content %}
+        {% endblock %}
+    </article>
+</div>
+
+  <script>
+document.querySelector(".close-offcanvas").addEventListener("click", function(e){
+    document.querySelector("body").classList.toggle("-open-offcanvas");
+})
+  </script>
   </body>
 </html>

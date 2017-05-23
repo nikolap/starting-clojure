@@ -1,7 +1,7 @@
 (defproject starting-clojure "0.1.0-SNAPSHOT"
 
   :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :url "http://starting-clojure.com"
 
   :dependencies [[compojure "1.6.0"]
                  [cprop "0.1.10"]
